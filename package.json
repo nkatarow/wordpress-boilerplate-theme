@@ -1,0 +1,27 @@
+{
+  "name": "wordpress-boilerplate",
+  "description": "Coming soon...",
+  "version": "0.0.1",
+  "private": true,
+  "contributors": [
+    {
+      "name": "Nick Katarow (http://nkatarow.net)"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/nkatarow-turnstyle/wordpress-boilerplate"
+  },
+  "dependencies": {
+    "grunt": ">=0.4.2",
+    "grunt-cli": ">=0.1.11",
+    "grunt-shell": "~0.2.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-watch": ">=0.5.3"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}
