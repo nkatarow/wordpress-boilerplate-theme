@@ -12,8 +12,6 @@
             // Figure out what our server name is
             $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-            echo $host;
-
             // If it's the dev environment...
             if ($host == 'wordpress-boilerplate.dev/') {
                 // Then provide the regular compiled CSS file.
