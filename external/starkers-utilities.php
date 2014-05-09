@@ -6,8 +6,8 @@
 	 * Starkers Utilities Class v.1.1
 	 *
 	 * @package 	WordPress
-	 * @subpackage 	Starkers
-	 * @since 		Starkers 4.0
+	 * @subpackage 	Wordpress Boilerplate Theme
+	 * @since 		Wordpress Boilerplate Theme 1.0
 	 *
 	 * We've included a number of helper functions that we use in every theme we produce.
 	 * The main one that is used in Starkers is Starkers_Utilities::add_slug_to_body_class(), this will add the page or post slug to the body class
@@ -34,7 +34,7 @@
     	 * Allows you to pass in an array of parts and output them in your theme
     	 * e.g. <?php get_template_parts(array('part-1', 'part-2')); ?>
     	 *
-    	 * @param 	array 
+    	 * @param 	array
     	 * @return 	void
     	 * @author 	Keir Whitaker
     	 **/
@@ -48,7 +48,7 @@
     	 * Pass in a path and get back the page ID
     	 * e.g. Starkers_Utilities::get_page_id_from_path('about/terms-and-conditions');
     	 *
-    	 * @param 	string 
+    	 * @param 	string
     	 * @return 	integer
     	 * @author 	Keir Whitaker
     	 **/
@@ -65,7 +65,7 @@
     	 * Append page slugs to the body class
     	 * NB: Requires init via add_filter('body_class', 'add_slug_to_body_class');
     	 *
-    	 * @param 	array 
+    	 * @param 	array
     	 * @return 	array
     	 * @author 	Keir Whitaker
     	 */
@@ -84,7 +84,7 @@
     	/**
     	 * Get the category id from a category name
     	 *
-    	 * @param 	string 
+    	 * @param 	string
     	 * @return 	string
     	 * @author 	Keir Whitaker
     	 */

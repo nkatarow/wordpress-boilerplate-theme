@@ -1,18 +1,18 @@
 <?php
 /**
  * Search results page
- * 
+ *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @subpackage 	Wordpress Boilerplate Theme
+ * @since 		Wordpress Boilerplate Theme 1.0
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ): ?>
-<h2>Search Results for '<?php echo get_search_query(); ?>'</h2>	
+<h2>Search Results for '<?php echo get_search_query(); ?>'</h2>
 <ol>
 <?php while ( have_posts() ) : the_post(); ?>
 	<li>

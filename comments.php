@@ -8,8 +8,8 @@
  * located in the functions.php file.
  *
  * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @subpackage 	Wordpress Boilerplate Theme
+ * @since 		Wordpress Boilerplate Theme 1.0
  */
 ?>
 <div id="comments">
