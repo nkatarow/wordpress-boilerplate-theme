@@ -7,12 +7,12 @@
         $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
         // If it's the dev environment...
-        if ($host == 'localhost/') {
+        if ($host == 'wordpress-boilerplate.dev/') {
             // Then provide the JS files individually for easier debugging.
             include 'scripts.php';
         } else {
             // Otherwise, provide the compiled and uglified JS file.
-            echo '<script src="/wp-content/themes/custom/_ui/compiled/main.min.js"></script>';
+            echo '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/main.min.js"></script>';
         }
     ?>
     </body>

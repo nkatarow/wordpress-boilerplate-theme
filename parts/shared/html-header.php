@@ -12,18 +12,20 @@
             // Figure out what our server name is
             $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
+            echo $host;
+
             // If it's the dev environment...
-            if ($host == 'localhost/') {
+            if ($host == 'wordpress-boilerplate.dev/') {
                 // Then provide the regular compiled CSS file.
-                echo '<link rel="stylesheet" href="/wp-content/themes/custom/_ui/compiled/main.css" type="text/css" media="all">';
+                echo '<link rel="stylesheet" href="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/main-dev.css" type="text/css" media="all">';
             } else {
                 // Otherwise, provide the compiled and minified CSS file.
-                echo '<link rel="stylesheet" href="/wp-content/themes/custom/_ui/compiled/main.min.css" type="text/css" media="all">';
+                echo '<link rel="stylesheet" href="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/main.min.css" type="text/css" media="all">';
             }
         ?>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
         <!-- This script should be customized and minified for production builds -->
-        <script src="/wp-content/themes/custom/_ui/js/lib/modernizr-dev.js"></script>
+        <script src="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/js/lib/modernizr-dev.js"></script>
     </head>
     <body <?php body_class(); ?>>

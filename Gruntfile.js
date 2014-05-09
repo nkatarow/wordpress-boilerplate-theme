@@ -11,24 +11,29 @@ module.exports = function (grunt) {
         sass: {
             dev: {
                 options: {
+                    sourcemap: true,
+                    trace: true,
                     style: 'expanded',
                     debugInfo: true,
                     lineNumbers: true
                 },
                 files: {
-                    '_ui/compiled/main.css': '_ui/css/main.scss'
+                    '_ui/compiled/main-dev.css': '_ui/css/main.scss'
+                }
+            },
+            prod: {
+                options: {
+                    sourcemap: false,
+                    trace: false,
+                    style: 'commpressed',
+                    debugInfo: false,
+                    lineNumbers: false
+                },
+                files: {
+                    '_ui/compiled/main-prod.css': '_ui/css/main.scss'
                 }
             }
-            // add prod files that aren't expanded
         },
-
-        // autoprefixer: {
-        //     dist: {
-        //         files: {
-        //             '_ui/compiled/main.css': '_ui/compiled/main.css'
-        //         }
-        //     }
-        // },
 
         cssmin: {
             dist: {
@@ -36,7 +41,7 @@ module.exports = function (grunt) {
                     banner: '/*! <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd HH:MM") %> */\n'
                 },
                 files: {
-                    '_ui/compiled/main.min.css': ['_ui/compiled/main.css']
+                    '_ui/compiled/main.min.css': ['_ui/compiled/main-prod.css']
                 }
             }
         },
@@ -80,14 +85,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    // grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-shell');
 
     // Grunt tasks
-    grunt.registerTask('default', ['sass', 'scriptblock']);
-    grunt.registerTask('build', ['sass', 'cssmin', 'concat', 'uglify']);
+    grunt.registerTask('default', ['sass:dev', 'scriptblock']);
+    grunt.registerTask('build', ['sass:prod', 'cssmin', 'scriptblock', 'concat', 'uglify']);
 
     // Automate creation of scriptblock to be loaded in footer
     grunt.registerTask('scriptblock', function(){
@@ -98,7 +102,7 @@ module.exports = function (grunt) {
             files = grunt.file.expand(path);
 
             files.forEach(function(file){
-                html += '<script src="/wp-content/themes/custom/' + file + '"></script>' + "\n";
+                html += '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/' + file + '"></script>' + "\n";
             });
 
             grunt.file.write('parts/shared/scripts.php', html);
