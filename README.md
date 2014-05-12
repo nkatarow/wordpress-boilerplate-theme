@@ -3,14 +3,14 @@
 
 **Starting point for custom Wordpress theme development.**
 
-The primary goals of this build process are a clean, component based organization, mixed with automation for CSS/SASS and JavaScript concatination and minification/uglification. 
+The primary goals of this build process are a clean, component based organization, mixed with automation for CSS/SASS and JavaScript concatenation and minification/uglification. 
 
 ## Author(s) / Inspiration
 Build process, base styles, and JavaScript by [Nick Katarow](http://github.com/nkatarow).
 
 Original [Starkers Theme](https://github.com/viewportindustries/starkers) built by [Viewport Industries, Ltd](http://http://viewportindustries.com/).
 
-SASS Structure and base styles inspirted by [Brad Frost](http://bradfrostweb.com/)'s [Pattern Lab](http://demo.patternlab.io/).
+SASS Structure and base styles inspired by [Brad Frost](http://bradfrostweb.com/)'s [Pattern Lab](http://demo.patternlab.io/).
 
 ## What it does
 
@@ -21,7 +21,7 @@ CSS files are compiled into the **_ui/compiled/** directory from the files impor
 The CSS directory structure broken into three categories.
 
 * **helpers** - Used primarily for things like CSS reset/normalize files, SASS variables and mixins.
-* **base** - Intened for base, classless, global styles for HTML elements. In addition, utilities like clearfixes and offscreen text can be considered base styles. 
+* **base** - Intended for base, classless, global styles for HTML elements. In addition, utilities like clear fixes and offscreen text can be considered base styles. 
 * **components** - Where the majority of your custom styling should take place. For best organization, create a new file for each new component you build and take advantage of SASS nesting techniques to keep your components self contained.
 
 **JavaScript**
@@ -32,7 +32,7 @@ The JavaScript directory structure broken into three categories.
 
 * **head-libs** - Some JS libraries need to be loaded in the header in order to work properly, place those libraries in this directory, but only if you have to. Best practices dictate to load as much of the JS in the footer as possible. This comes with jQuery 1.11.1 and the dev build of Modernizr by default.
 * **foot-libs** - Put the rest of your JS libraries that can be loaded in the footer here.
-* **components** - Outside of the **_ui/js/app.main.js** file, all of your JS components should be placed here. By default, this comes with an empty namespaced file to used as a template.
+* **components** - Outside of the **_ui/js/app.main.js** file, all of your JS components should be placed here. By default, this comes with an empty name spaced file to used as a template.
 
 **Templates**
 
@@ -40,12 +40,12 @@ The included templates are largely unchanged from the Starkers Wordpress theme. 
 
 Each of these files detect the host and perform an if/then to see if it matches your development host (default is **wordpress-boilerplate.dev/**). You'll need to change this if your development host differs. 
 
-* **parts/shared/html-header.php** - If the development host is detected, the extended syntax **main-dev.css** and compiled list of scripts as descripbed in the **Usage** section below (**header-scripts.php**) files will be loaded. If the host is anything other than the one mentioned in the if/then, the compiled and minified **main.min.css** and the concatonated and uglified **header-scripts.min.js** will be loaded instead.
+* **parts/shared/html-header.php** - If the development host is detected, the extended syntax **main-dev.css** and compiled list of scripts as described in the **Usage** section below (**header-scripts.php**) files will be loaded. If the host is anything other than the one mentioned in the if/then, the compiled and minified **main.min.css** and the concatenated and uglified **header-scripts.min.js** will be loaded instead.
 
-* **parts/shared/html-footer.php** - Similar to the **html-header.php** file above, this performs the same test, but instead will either load the compiled list of scripts (**footer-scripts.php**) or the concatonated and uglified **footer-scripts.min.js** will be loaded instead.
+* **parts/shared/html-footer.php** - Similar to the **html-header.php** file above, this performs the same test, but instead will either load the compiled list of scripts (**footer-scripts.php**) or the concatenated and uglified **footer-scripts.min.js** will be loaded instead.
 
 ## Setup
-To get th app up and running, you will need to make sure you have the following software installed prior to running. If you've already got these all installed, skip to the app dependencies.
+To get the app up and running, you will need to make sure you have the following software installed prior to running. If you've already got these all installed, skip to the app dependencies.
 
 ### System Dependancies
 * [Node](http://nodejs.org/) - Download and install using the link provided.
@@ -93,11 +93,11 @@ The build task should be run when you're ready to generate or update your optimi
 * **CSS/SASS**
 	* Again, the task will check your **_ui/css/main.scss** file for which SASS files to include. 
 	* This time, it will compile to **_ui/compiled/main-prod.css** but will be compressed and will not include any of the debug options turned on for the development build. 
-	* From that compiled file, CSSMIN minification will be performed, futher compressing the file size.
+	* From that compiled file, CSSMIN minification will be performed, further compressing the file size.
 * **JavaScript** 
 	* Again, the **header-scripts.php** and **footer-scripts.php** files will be created. 
-	* From those, two files will be created (**_ui/compiled/header-scripts.js** and **_ui/compiled/footer-scripts.js**) where all of the separate files listed in the PHP includes will be concatonated. 
-	* From there, two additional files will be created (**header-scripts.min.js** and **footer-scripts.min.js**) where each of the concatonated files from the previous step will be uglified (compressed).
+	* From those, two files will be created (**_ui/compiled/header-scripts.js** and **_ui/compiled/footer-scripts.js**) where all of the separate files listed in the PHP includes will be concatenated. 
+	* From there, two additional files will be created (**header-scripts.min.js** and **footer-scripts.min.js**) where each of the concatenated files from the previous step will be uglified (compressed).
 
 ## Libraries Included
 * jQuery 1.11.1
