@@ -63,13 +63,13 @@
 	 * @author Keir Whitaker
 	 */
 
-	function starkers_script_enqueuer() {
-		wp_register_script( 'site', get_template_directory_uri().'/_ui/compiled/main.js', array( 'jquery' ) );
-		wp_enqueue_script( 'site' );
+	// function starkers_script_enqueuer() {
+	// 	wp_register_script( 'site', get_template_directory_uri().'/_ui/compiled/main.js', array( 'jquery' ) );
+	// 	wp_enqueue_script( 'site' );
 
-		wp_register_style( 'screen', get_template_directory_uri().'/_ui/compiled/main.css', '', '', 'screen' );
-        wp_enqueue_style( 'screen' );
-	}
+	// 	wp_register_style( 'screen', get_template_directory_uri().'/_ui/compiled/main.css', '', '', 'screen' );
+ 	//      wp_enqueue_style( 'screen' );
+	// }
 
 	/* ========================================================================================================================
 	

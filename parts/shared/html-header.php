@@ -14,18 +14,19 @@
 
             // If it's the dev environment...
             if ($host == 'wordpress-boilerplate.dev/') {
-                // Then provide the regular compiled CSS file.
-                echo '<link rel="stylesheet" href="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/main-dev.css" type="text/css" media="all">';
-                
+        ?>
+                <!-- Then provide the regular compiled CSS file. -->
+                <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_ui/compiled/main-dev.css" type="text/css" media="all">
+        <?php
                 // And the headers scripts individually
                 include 'header-scripts.php';
             } else {
-                // Otherwise, provide the compiled and minified CSS file.
-                echo '<link rel="stylesheet" href="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/main.min.css" type="text/css" media="all">';
-            
-                // And the header scripts compiled and uglified
-                echo '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/header-scripts.min.js"></script>';
-            }
         ?>
+                <!-- Otherwise, provide the compiled and minified CSS file. -->
+                <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_ui/compiled/main.min.css" type="text/css" media="all">
+            
+                <!-- And the header scripts compiled and uglified -->
+                <script src="<?php echo get_template_directory_uri(); ?>/_ui/compiled/header-scripts.min.js"></script>
+        <?php } ?>
     </head>
     <body <?php body_class(); ?>>

@@ -11,9 +11,9 @@
             // Then provide the JS files individually for easier debugging.
             include 'footer-scripts.php';
         } else {
-            // Otherwise, provide the compiled and uglified JS file.
-            echo '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/footer-scripts.min.js"></script>';
-        }
     ?>
+            <!-- Otherwise, provide the compiled and uglified JS file. -->
+            <script src="<?php echo get_template_directory_uri(); ?>/_ui/compiled/footer-scripts.min.js"></script>
+    <?php } ?>
     </body>
 </html>

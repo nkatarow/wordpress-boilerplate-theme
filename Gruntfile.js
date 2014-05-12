@@ -112,7 +112,7 @@ module.exports = function (grunt) {
             headfiles = grunt.file.expand(path);
 
             headfiles.forEach(function(file){
-                scriptHead += '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/' + file + '"></script>' + "\n";
+                scriptHead += '<script src="<?php echo get_template_directory_uri(); ?>/' + file + '"></script>' + "\n";
             });
 
             grunt.file.write('parts/shared/header-scripts.php', scriptHead);
@@ -122,7 +122,7 @@ module.exports = function (grunt) {
             footfiles = grunt.file.expand(path);
 
             footfiles.forEach(function(file){
-                scriptFoot += '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/' + file + '"></script>' + "\n";
+                scriptFoot += '<script src="<?php echo get_template_directory_uri(); ?>/' + file + '"></script>' + "\n";
             });
 
             grunt.file.write('parts/shared/footer-scripts.php', scriptFoot);
