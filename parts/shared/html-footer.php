@@ -12,7 +12,7 @@
             include 'scripts.php';
         } else {
             // Otherwise, provide the compiled and uglified JS file.
-            echo '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/main.min.js"></script>';
+            echo '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/footer-scripts.min.js"></script>';
         }
     ?>
     </body>
