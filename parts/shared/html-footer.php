@@ -9,7 +9,7 @@
         // If it's the dev environment...
         if ($host == 'wordpress-boilerplate.dev/') {
             // Then provide the JS files individually for easier debugging.
-            include 'scripts.php';
+            include 'footer-scripts.php';
         } else {
             // Otherwise, provide the compiled and uglified JS file.
             echo '<script src="/wp-content/themes/Wordpress-Boilerplate-Theme/_ui/compiled/footer-scripts.min.js"></script>';

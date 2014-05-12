@@ -30,7 +30,7 @@ module.exports = function (grunt) {
                 options: {
                     sourcemap: false,
                     trace: false,
-                    style: 'commpressed',
+                    style: 'compressed',
                     debugInfo: false,
                     lineNumbers: false
                 },
