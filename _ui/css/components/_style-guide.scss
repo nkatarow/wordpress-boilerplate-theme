@@ -1,0 +1,84 @@
+/* ==========================================================================
+   COMPONENTS/_STYLE-GUIDE.SCSS
+   ========================================================================== */
+/**
+ *
+ * These are styles only used for demonstrations on the style guide page.
+ *
+ */
+
+.style-guide {
+    .container {
+        @include container();
+        @include clearfix();
+        margin: 0 auto;
+        max-width: $max-width;
+    }
+
+    .example {
+        outline: 1px dashed #ddd;
+        margin: 1em 2em;
+        padding: 0.5em 0.5em;
+    }
+
+    .grid-example {
+        @include container();
+        @include clearfix();
+
+        & > div {
+            background-color: pink;
+            height: 50px;
+        }
+
+        .left-nav {
+            margin-bottom: $gutter-width;
+
+            @media screen and (min-width: 700px) {
+                @include column(3);
+            }
+        }
+
+        .main-content {
+            margin-bottom: $gutter-width;
+
+            @media screen and (min-width: 700px) {
+                @include column(9);
+                @include push(3);
+            }
+        }
+    
+        .pros {
+            @include column(6);
+            
+            margin-bottom: $gutter-width;
+
+            @media screen and (min-width: 700px) {
+                @include column(5);
+            }
+        }
+
+        .cons {
+            @include column(6);
+            @include push(6);
+            
+            margin-bottom: $gutter-width;
+
+            @media screen and (min-width: 700px) {
+                @include column(7);
+                @include push(5);
+            }
+        }
+    } // .grid-example
+
+
+    .typography,
+    .grouping,
+    .text-semantics,
+    .tables,
+    .forms {
+        @include container();
+        margin: 0 auto;
+        max-width: $max-width;
+    }
+
+}

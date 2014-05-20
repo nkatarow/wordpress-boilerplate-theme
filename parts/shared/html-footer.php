@@ -4,10 +4,10 @@
 
     <?php
         // Figure out what our server name is
-        $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        $host = $_SERVER['HTTP_HOST'];
 
         // If it's the dev environment...
-        if ($host == 'wordpress-boilerplate.dev/') {
+        if ($host == 'wordpress-boilerplate.dev') {
             // Then provide the JS files individually for easier debugging.
             include 'footer-scripts.php';
         } else {

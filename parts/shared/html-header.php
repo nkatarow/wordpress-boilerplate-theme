@@ -10,10 +10,10 @@
         <?php wp_head(); ?>
         <?php
             // Figure out what our server name is
-            $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+            $host = $_SERVER['HTTP_HOST'];
 
             // If it's the dev environment...
-            if ($host == 'wordpress-boilerplate.dev/') {
+            if ($host == 'wordpress-boilerplate.dev') {
         ?>
                 <!-- Then provide the regular compiled CSS file. -->
                 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_ui/compiled/main-dev.css" type="text/css" media="all">
