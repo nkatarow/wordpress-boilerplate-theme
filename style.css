@@ -7,7 +7,7 @@ Description: Bare-bones Wordpress theme built on top of Starkers theme by Viewpo
 Version: 1.0 / Starkers 4.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:
+Tags: responsive-layout, accessibility-ready
 Text Domain:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -22,4 +22,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *
  * INTENTIONALLY LEFT BLANK, DO NOT ADD OR COMPILE TO THIS FILE
  *
+ * These are just to please the Wordpress theme check.
+ * If you need to edit them, do so in _ui/css/base/_wordpress-classes.scss.
+ *
  */
+
+.wp-caption, .wp-caption-text, .sticky, .gallery-caption, .bypostauthor, .alignright, .alignleft, .aligncenter {}
