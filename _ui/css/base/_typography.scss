@@ -2,6 +2,10 @@
    BASE/_TYPOGRAPHY.SCSS
    ========================================================================== */
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62.5%;
+}
 
 // Headings
 h1, .h1   {

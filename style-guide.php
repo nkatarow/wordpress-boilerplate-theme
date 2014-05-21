@@ -13,6 +13,42 @@ Template Name: Style Guide
         <p>This document is a guide to the mark-up styles used throughout the site. Parts of this markup guide are attributable <a href="http://paulrobertlloyd.com/about/styleguide/"> Paul Lloyd's style guide</a>, others to <a href="http://www.mezzoblue.com/">Dave Shea</a>, and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/">Creative Commons License</a>.</p>
     </header>
 
+    <section class="palette">
+        <h2>Color Palette</h2>
+        <p>Global color variables as defined in _variables.scss. Reuse colors often to promote consistency.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Variable Name</th>
+                    <th scope="col">Hex Value</th>
+                    <th scope="col">RGB(A) Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #fff; color: #000;">
+                    <td>$white</td>
+                    <td>#fff</td>
+                    <td>rgb(255, 255, 255)</td>
+                </tr>
+                <tr style="background-color: #808080;">
+                    <td>$gray</td>
+                    <td>#808080</td>
+                    <td>rgb(128, 128, 128)</td>
+                </tr>
+                <tr style="background-color: #333;">
+                    <td>$gray-dark</td>
+                    <td>#333</td>
+                    <td>rgb(51, 51, 51)</td>
+                </tr>
+                <tr style="background-color: #000;">
+                    <td>$black</td>
+                    <td>#000</td>
+                    <td>rgb(0, 0, 0)</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
     <section>
         <header class="container">
             <h2>Grid</h2>
@@ -517,7 +553,7 @@ Template Name: Style Guide
     </section><!-- /.forms -->
 
 
-    
+
 </div><!-- / main -->
 
 

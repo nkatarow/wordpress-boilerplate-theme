@@ -4,9 +4,11 @@
 
 
 // Basic Lists
-ol, ul {
-    margin: 0;
-    padding: 0;
+ol {
+    margin-left: 1.25em;
+}
+
+ul {
     list-style: none;
 }
 

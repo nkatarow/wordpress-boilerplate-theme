@@ -8,6 +8,18 @@
  */
 
 .style-guide {
+    .palette,
+    .typography,
+    .grouping,
+    .text-semantics,
+    .tables,
+    .forms,
+    footer {
+        @include container();
+        margin: 0 auto $gutter-width;
+        max-width: $max-width;
+    }
+
     .container {
         @include container();
         @include clearfix();
@@ -21,9 +33,27 @@
         padding: 0.5em 0.5em;
     }
 
+    .palette {
+        table {
+            border-collapse: collapse;
+            color: $white;
+            width: 100%;
+
+            th {
+                text-align: left;
+                text-decoration: underline;
+            }
+            td {
+                width: 33%;
+            }
+        }
+    }
+
     .grid-example {
         @include container();
         @include clearfix();
+        margin: 0 auto;
+        max-width: $max-width;
 
         & > div {
             background-color: pink;
@@ -70,15 +100,5 @@
         }
     } // .grid-example
 
-
-    .typography,
-    .grouping,
-    .text-semantics,
-    .tables,
-    .forms {
-        @include container();
-        margin: 0 auto;
-        max-width: $max-width;
-    }
 
 }
