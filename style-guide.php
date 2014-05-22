@@ -552,7 +552,14 @@ Template Name: Style Guide
             </form>
     </section><!-- /.forms -->
 
+    <section class="buttons">
+        <h2>Buttons</h2>
+        <p>Whether you use the <code>button</code> or <code>anchor</code> element to semantically handle your buttons, you can add the same classes to display them consistently.</p>
 
+        <button class="btn">Default Button</button>
+        <a href="#" class="btn alt">Alternate Button</a>
+        <a href="#" class="btn disabled">Disabled Button</a>
+    </section>
 
 </div><!-- / main -->
 

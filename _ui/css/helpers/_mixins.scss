@@ -1,0 +1,48 @@
+/* ==========================================================================
+   HELPERS/_MIXINS.SCSS
+   ========================================================================== */
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+
+    // keeps background from busting out of border
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $color) {
+    -webkit-box-shadow: $horizontal $vertical $blur $color;
+    -moz-box-shadow: $horizontal $vertical $blur $color;
+    box-shadow: $horizontal $vertical $blur $color;
+}
+
+@mixin inset-box-shadow($horizontal, $vertical, $blur, $color) {
+    -webkit-box-shadow: inset $horizontal $vertical $blur $color;
+    -moz-box-shadow: inset $horizontal $vertical $blur $color;
+    box-shadow: inset $horizontal $vertical $blur $color;
+}
+
+@mixin vertical-gradient($start, $stop) {
+    background: ($start + $stop) / 2;
+    background: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+    background: -moz-linear-gradient(center top, $start 0%, $stop 100%);
+    background: -moz-gradient(center top, $start 0%, $stop 100%);
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin transition($which, $time, $type) {
+    -webkit-transition: $which, $time, $type;
+    -moz-transition: $which, $time, $type;
+    -ms-transition: $which, $time, $type;
+    -o-transition: $which, $time, $type;
+    transition: $which, $time, $type;
+}

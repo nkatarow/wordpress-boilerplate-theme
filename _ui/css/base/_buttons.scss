@@ -1,0 +1,42 @@
+/* ==========================================================================
+   BASE/_BUTTONS.SCSS
+   ========================================================================== */
+
+// Reset button font size to match default
+button {
+    font-size: 1em;
+}
+
+.btn {
+    background-color: $black;
+    border: 0;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: 1em;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+        background-color: pink;
+    }
+
+    &.alt {
+        background-color: $gray-dark;
+    
+        &:hover,
+        &:focus {
+            background-color: yellow;
+        }
+    }
+
+    &.disabled {
+        background-color: $gray;
+    
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+}

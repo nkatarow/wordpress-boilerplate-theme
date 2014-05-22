@@ -3,7 +3,7 @@
 
 **Starting point for custom Wordpress theme development.**
 
-The primary goals of this build process are a clean, component based organization, mixed with automation for CSS/SASS and JavaScript concatenation and minification/uglification. 
+The primary goals of this build process are a clean, component based organization, mixed with automation for CSS/SASS and JavaScript concatenation and minification/uglification.
 
 ## Author(s) / Inspiration
 Build process, base styles, and JavaScript by [Nick Katarow](http://github.com/nkatarow).
@@ -21,7 +21,7 @@ CSS files are compiled into the **_ui/compiled/** directory from the files impor
 The CSS directory structure broken into three categories.
 
 * **helpers** - Used primarily for things like CSS reset/normalize files, SASS variables and mixins.
-* **base** - Intended for base, classless, global styles for HTML elements. In addition, utilities like clear fixes and offscreen text can be considered base styles. 
+* **base** - Intended for base, classless, global styles for HTML elements. In addition, utilities like clear fixes and offscreen text can be considered base styles.
 * **components** - Where the majority of your custom styling should take place. For best organization, create a new file for each new component you build and take advantage of SASS nesting techniques to keep your components self contained.
 
 **JavaScript**
@@ -38,7 +38,7 @@ The JavaScript directory structure broken into three categories.
 
 The included templates are largely unchanged from the Starkers Wordpress theme. There are two includes that have been edited include conditional loading based on the compiled files as described below.
 
-Each of these files detect the host and perform an if/then to see if it matches your development host (default is **wordpress-boilerplate.dev/**). You'll need to change this if your development host differs. 
+Each of these files detect the host and perform an if/then to see if it matches your development host (default is **wordpress-boilerplate.dev/**). You'll need to change this if your development host differs.
 
 * **parts/shared/html-header.php** - If the development host is detected, the extended syntax **main-dev.css** and compiled list of scripts as described in the **Usage** section below (**header-scripts.php**) files will be loaded. If the host is anything other than the one mentioned in the if/then, the compiled and minified **main.min.css** and the concatenated and uglified **header-scripts.min.js** will be loaded instead.
 
@@ -87,19 +87,20 @@ The watch task will look for changes on all SCSS and JS files, automatically run
 
 ```
 grunt build
-``` 
+```
 The build task should be run when you're ready to generate or update your optimized production files.
 
 * **CSS/SASS**
-	* Again, the task will check your **_ui/css/main.scss** file for which SASS files to include. 
-	* This time, it will compile to **_ui/compiled/main-prod.css** but will be compressed and will not include any of the debug options turned on for the development build. 
+	* Again, the task will check your **_ui/css/main.scss** file for which SASS files to include.
+	* This time, it will compile to **_ui/compiled/main-prod.css** but will be compressed and will not include any of the debug options turned on for the development build.
 	* From that compiled file, CSSMIN minification will be performed, further compressing the file size.
-* **JavaScript** 
-	* Again, the **header-scripts.php** and **footer-scripts.php** files will be created. 
-	* From those, two files will be created (**_ui/compiled/header-scripts.js** and **_ui/compiled/footer-scripts.js**) where all of the separate files listed in the PHP includes will be concatenated. 
+* **JavaScript**
+	* Again, the **header-scripts.php** and **footer-scripts.php** files will be created.
+	* From those, two files will be created (**_ui/compiled/header-scripts.js** and **_ui/compiled/footer-scripts.js**) where all of the separate files listed in the PHP includes will be concatenated.
 	* From there, two additional files will be created (**header-scripts.min.js** and **footer-scripts.min.js**) where each of the concatenated files from the previous step will be uglified (compressed).
 
 ## Libraries Included
-* jQuery 1.11.1
-* Modernizr
+* [Profound Grid](http://www.profoundgrid.com/)
+* [jQuery 1.11.1](http://jquery.com/)
+* [Modernizr](http://www.modernizr.com)
 
