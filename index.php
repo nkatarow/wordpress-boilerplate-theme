@@ -13,7 +13,7 @@
  * @since 		Wordpress Boilerplate Theme 1.0
  */
 ?>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ): ?>
 <h2>Latest Posts</h2>

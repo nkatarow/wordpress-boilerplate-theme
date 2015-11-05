@@ -14,7 +14,7 @@
  * @since       Starkers 4.0
  */
 ?>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ): ?>
 
@@ -43,4 +43,4 @@
 <h2>No posts to display</h2>
 <?php endif; ?>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer' ) ); ?>

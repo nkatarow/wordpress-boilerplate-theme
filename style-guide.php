@@ -4,7 +4,7 @@ Template Name: Style Guide
 */
 ?>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
 
 
 <div role="main" class="style-guide">
@@ -564,4 +564,4 @@ Template Name: Style Guide
 </div><!-- / main -->
 
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer' ) ); ?>
