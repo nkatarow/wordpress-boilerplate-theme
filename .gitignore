@@ -1,7 +1,5 @@
 .DS_Store
 .sass-cache/
 node_modules/
-parts/shared/header-scripts.php
-parts/shared/footer-scripts.php
-_ui/compiled/
+dist/
 *.log
