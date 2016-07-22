@@ -15,18 +15,15 @@
             // If it's the dev environment...
             if ($host == 'wordpress-boilerplate.dev') {
         ?>
-                <!-- Then provide the regular compiled CSS file. -->
-                <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_ui/compiled/main-dev.css" type="text/css" media="all">
-        <?php
-                // And the headers scripts individually
-                include 'header-scripts.php';
-            } else {
-        ?>
-                <!-- Otherwise, provide the compiled and minified CSS file. -->
-                <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_ui/compiled/main.min.css" type="text/css" media="all">
-            
-                <!-- And the header scripts compiled and uglified -->
-                <script src="<?php echo get_template_directory_uri(); ?>/_ui/compiled/header-scripts.min.js"></script>
+            <!-- Then provide the regular compiled CSS/JS files. -->
+            <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.css" type="text/css" media="all">
+            <script src="<?php echo get_template_directory_uri(); ?>/dist/js/header-scripts.js"></script>
+        <?php } else { ?>
+            <!-- Otherwise, provide the compiled and minified CSS file. -->
+            <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.min.css" type="text/css" media="all">
+        
+            <!-- And the header scripts compiled and uglified -->
+            <script src="<?php echo get_template_directory_uri(); ?>/dist/js/header-scripts.min.js"></script>
         <?php } ?>
     </head>
     <body <?php body_class(); ?>>

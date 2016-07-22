@@ -16,7 +16,7 @@ SASS Structure and base styles inspired by [Brad Frost](http://bradfrostweb.com/
 
 **CSS/SASS**
 
-CSS files are compiled into the **_ui/compiled/** directory from the files imported by the **_ui/css/main.scss** file. Note that whenever a new .scss file is added, it must be manually added to the **_ui/css/main.scss** file.
+
 
 The CSS directory structure broken into three categories.
 
@@ -40,20 +40,16 @@ The included templates are largely unchanged from the Starkers Wordpress theme. 
 
 Each of these files detect the host and perform an if/then to see if it matches your development host (default is **wordpress-boilerplate.dev/**). You'll need to change this if your development host differs.
 
-* **parts/shared/html-header.php** - If the development host is detected, the extended syntax **main-dev.css** and compiled list of scripts as described in the **Usage** section below (**header-scripts.php**) files will be loaded. If the host is anything other than the one mentioned in the if/then, the compiled and minified **main.min.css** and the concatenated and uglified **header-scripts.min.js** will be loaded instead.
-
-* **parts/shared/html-footer.php** - Similar to the **html-header.php** file above, this performs the same test, but instead will either load the compiled list of scripts (**footer-scripts.php**) or the concatenated and uglified **footer-scripts.min.js** will be loaded instead.
-
 ## Setup
 To get the app up and running, you will need to make sure you have the following software installed prior to running. If you've already got these all installed, skip to the app dependencies.
 
 ### System Dependancies
 * [Node](http://nodejs.org/) - Download and install using the link provided.
 * [NPM](https://npmjs.org/) - This should be installed automatically with Node.js.
-* [Grunt](http://gruntjs.com/getting-started) - Run the following command after Node/NPM are installed:
+* [Gulp]() - Run the following command after Node/NPM are installed:
 
 ```
-$ npm install grunt-cli -g
+$
 ```
  
 * [Sass](http://sass-lang.com/) - Assuming you're running ruby, run the following command (if you get an error, try running with sudo):

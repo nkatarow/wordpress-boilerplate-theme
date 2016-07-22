@@ -9,7 +9,7 @@ var gulp = require ('gulp'),
 		notify = require('gulp-notify'),
 		cache = require('gulp-cache'),
 		merge = require('merge-stream'),
-		//livereload = require('gulp-livereload'),
+		livereload = require('gulp-livereload'),
 		del = require('del');
 
 // Concat/autoprefix/minify CSS
@@ -68,6 +68,6 @@ gulp.task('watch', function(){
 	gulp.watch('_ui/js/**/*.js', ['scripts']);
 	gulp.watch('_ui/img/**/*', ['images']);
 
-	// livereload.listen();
-	// gulp.watch(['dist/*']).on('change', livereload.changed);
+	livereload.listen();
+	gulp.watch(['dist/*']).on('change', livereload.changed);
 });

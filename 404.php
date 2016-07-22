@@ -14,3 +14,5 @@
 <h2>Page not found</h2>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer' ) ); ?>
+
+<!-- Test -->
